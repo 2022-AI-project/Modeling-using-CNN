@@ -120,7 +120,7 @@ class make_model():
             model.add(Dense(256, activation='relu'))
             model.add(Dropout(0.5))
             model.add(Dense(nb_classes, activation='softmax'))
-            optimizer=keras.optimizers.Nadam(lr=my_learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-07)
+            optimizer=keras.optimizers.Nadam(lr=my_learning_rate)
             model.compile(loss='mse', optimizer=optimizer, metrics=['accuracy'])
             model_dir = './model'
 
